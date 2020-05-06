@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#6c599f"><meta name="generator" content="Hexo 4.2.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#6c599f"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"mirror.zdl.one",root:"/",scheme:"Gemini",version:"7.8.0",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12,onmobile:!1},copycode:{enable:!0,show_result:!0,style:"mac"},back2top:{enable:!1,sidebar:!1,scrollpercent:!0},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!0,mediumzoom:!1,lazyload:!0,pangu:!0,comments:{style:"tabs",active:null,storage:!0,lazyload:!0,nav:null},algolia:{hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},path:"search.xml"}</script><meta name="description" content="本文系预备党员培训班学员主题党日实践活动总结　　11月21日，李克强总理到访京杭大运河拱宸桥段考察桥西历史街区。一个月之后的12月19日，循着总理的脚步，我们几位预备党员培训班的同学来到拱墅区京杭大运河拱宸桥段参观探访拱宸桥西历史街区和周边博物馆群（大运河博物馆、刀剪剑博物馆、扇博物馆、伞博物馆等）。"><meta property="og:type" content="article"><meta property="og:title" content="看时代变迁 品运河精神"><meta property="og:url" content="https://mirror.zdl.one/posts/8/index.html"><meta property="og:site_name" content="班班碎碎念"><meta property="og:description" content="本文系预备党员培训班学员主题党日实践活动总结　　11月21日，李克强总理到访京杭大运河拱宸桥段考察桥西历史街区。一个月之后的12月19日，循着总理的脚步，我们几位预备党员培训班的同学来到拱墅区京杭大运河拱宸桥段参观探访拱宸桥西历史街区和周边博物馆群（大运河博物馆、刀剪剑博物馆、扇博物馆、伞博物馆等）。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://web-1256060851.cos.ap-shanghai.myqcloud.com/posts/2014/12/bjhz-canal.jpg!500x"><meta property="article:published_time" content="2014-12-15T00:55:46.000Z"><meta property="article:modified_time" content="2020-05-06T14:32:57.764Z"><meta property="article:author" content="班班"><meta property="article:tag" content="杭州"><meta property="article:tag" content="博物馆"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://web-1256060851.cos.ap-shanghai.myqcloud.com/posts/2014/12/bjhz-canal.jpg!500x"><link rel="canonical" href="https://mirror.zdl.one/posts/8/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,lang:"zh-CN"}</script><script type="text/javascript">// Live2d
+// 注意：live2d_path 参数应使用绝对路径
+//const live2d_path = "https://web-1256060851.cos.ap-shanghai.myqcloud.com/assets-hexo/live2d/";
+const live2d_path = "/live2d/";
+
+// 封装异步加载资源的方法
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+// 加载 waifu.css live2d.min.js waifu-tips.js
+if (screen.width >= 768) {
+	Promise.all([
+		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		initWidget({
+			waifuPath: live2d_path + "waifu-tips.json",
+			apiPath: "https://api.zdl.one/live2d/", // https://live2d.fghrsh.net/api/
+			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
+		});
+	});
+}
+// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
+// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
+// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
+
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+// End Live2d Code
+
+window.addEventListener('load', () => {
+	console.log('\n%c班班碎碎念', 'text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);\
+font-size: 4em;');
+	console.log('\n%cBanban Ramble%cv3.0.0%c\n', 'padding: 8px; background: #3f5973; font-weight: bold; font-size: large; color: white;', 'padding: 8px; background: #649ab6; font-size: large; color: #eee;','');
+	console.log(`页面加载完毕消耗了${Math.round(performance.now() * 100) / 100}ms`);
+});</script><title>看时代变迁 品运河精神 | 班班碎碎念</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript><link rel="alternate" href="/atom.xml" title="班班碎碎念" type="application/atom+xml">
+</head><body itemscope itemtype="http://schema.org/WebPage"><div class="container"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span><h1 class="site-title">班班碎碎念</h1><span class="logo-line-after"><i></i></span></a><p class="site-subtitle" itemprop="description">无曰已是 无曰遂真</p></div><div class="site-nav-right"><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class="site-nav"><ul id="menu" class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>本站首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-overview"><a href="/overview/" rel="section"><i class="fas fa-th fa-fw"></i>文章总览</a></li><li class="menu-item menu-item-photos"><a href="/photos/" rel="section"><i class="fas fa-camera-retro fa-fw"></i>光影留痕</a></li><li class="menu-item menu-item-share"><a href="/share/" rel="section"><i class="fas fa-share-alt fa-fw"></i>好物分享</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fas fa-location-arrow fa-fw"></i>关于更多</a></li><li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fas fa-heart fa-fw"></i>小伙伴们</a></li><li class="menu-item menu-item-homepage"><a href="https://dlzhang.com/" rel="noopener" target="_blank"><i class="fas fa-globe fa-fw"></i>English</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索</a></li></ul></nav><div class="search-pop-overlay"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"><div id="no-result"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div></div></div></div></header><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content post posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://mirror.zdl.one/posts/8/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><meta itemprop="name" content="班班"><meta itemprop="description" content="@lei2rock<br>日常生活、碎碎念与科研随笔记录"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="班班碎碎念"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">看时代变迁 品运河精神</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2014-12-15 08:55:46" itemprop="dateCreated datePublished" datetime="2014-12-15T08:55:46+08:00">2014-12-15</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-folder"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/overview/travel/" itemprop="url" rel="index"><span itemprop="name">足迹图</span></a> </span></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-comment"></i> </span><span class="post-meta-item-text">Valine：</span> <a title="valine" href="/posts/8/#valine-comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/8/" itemprop="commentCount"></span></a></span></div></header><div class="post-body" itemprop="articleBody"><div class="note success"><p>本文系预备党员培训班学员主题党日实践活动总结</p></div><p>　　11月21日，李克强总理到访京杭大运河拱宸桥段考察桥西历史街区。一个月之后的12月19日，循着总理的脚步，我们几位预备党员培训班的同学来到拱墅区京杭大运河拱宸桥段参观探访拱宸桥西历史街区和周边博物馆群（大运河博物馆、刀剪剑博物馆、扇博物馆、伞博物馆等）。<a id="more"></a><br>　　与长城一样，大运河是中国罕有的标志性巨型文化遗产，是中华民族超凡的勤劳、勇敢、智慧的结晶。拱宸桥位于杭州市区大关桥之北，东连丽水路、台州路，西接桥弄街，连小河路，是杭城古桥中最高最长的石拱桥。拱宸桥东西横跨大运河，是京杭大运河到杭州的终点性标志。拱宸桥之于杭州的意义非比寻常，据说古时候，返乡的杭州人在看到这座古桥后，总会不由自主地激动起来，毕竟远走他乡久了，见到故乡熟悉的小桥迎面而来，心中自然生出许多感慨。</p><p><img data-src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/posts/2014/12/bjhz-canal.jpg!500x" alt="拱宸桥下的京杭运河"></p><h2 id="人类智慧的创造"><a href="#人类智慧的创造" class="headerlink" title="人类智慧的创造"></a>人类智慧的创造</h2><p>　　包括拱宸桥在内的桥西历史街区是大运河遗产的重要组成部分，反映着千年运河文化的积淀和漕运历史的兴衰。首先探访的大运河博物馆以千年运河为主题，运河上漕运船、南来北往的商贾、川流不息的车马…… 环形银幕上光影交错，让我们领略到昔日大运河的辉煌。劳动人民用最传统、最朴素的工具，开凿了这条运河。大运河，就像中华南北的血脉，将中国南北水系联系在一起，促进了漕运、商业、手工业发展。古建筑、码头、河堤，带领我们，穿越到隋唐、宋元直至明清，运河也经历了由兴起到衰落。由于海运的发展、河道淤积、经济中心的迁移，还有漕政的腐败，京杭大运河在明清时只剩下杭州到济宁段可以通航，而至今日过拱宸桥，过往船只已没有昔日那般繁多。今昔对比，物是人非，感慨良多。<br>　　京杭运河生生不息，孕育了两岸勤劳勇敢的人民，也衍生出了极为丰富的文化形式。刀剪剑、伞、扇也在长期的制造与使用过程中逐渐积累了丰富的精神文化内涵，是体现历代人民智慧、情感和审美的文化载体。杭州百姓耳熟能详的张小泉、王星记、西湖绸伞等品牌已列入国家级非物质文化遗产代表作名录，这些都是那个时代具有代表性的品牌，值得特别的保护，也正基于以上原因，杭州方才决定以集群的方式在拱宸桥附近建立了三座主题博物馆。也许你会对现代的剪刀放入博物馆展柜感到惊讶，那么当你从最古老的刀具一路看下来就会感慨科技进步的巨大动力和劳动人民的伟大智慧。扇博物馆中我看到了家乡的传统工艺品浦江麦秆扇，感受到日常生活中普普通通的生活用品（一把简简单单夏天扇风的扇子）其实也是一件精美的工艺品。传统文化就这样在传统手工艺品的现代化步伐中不断得以传递、传承。</p><h2 id="求真务实：保护、开发与传承"><a href="#求真务实：保护、开发与传承" class="headerlink" title="求真务实：保护、开发与传承"></a>求真务实：保护、开发与传承</h2><p>　　杭州因湖而名，因河而兴。公元610年，隋炀帝开通江南运河后，杭州的城市逐步扩大，人口不断增加，经济不断发展，南宋时，成为全世界最大的工商业城市。所以说，运河是杭州的一张世界级的名片。<br>　　西湖非常美，但是运河早些年是落后了，面对着各种各样的问题。环境污染，过度开发，大运河发出了求救的信号。为了保护古老美丽的母亲河，杭州市秉承还河于民的原则，采取了许多有效的保护措施，包括沟通江河、疏浚河道、集污纳管、整治内河、修建桥梁…… 这些卓有成效的措施方法与其带来的伟大成果。运河的重生不仅仅靠市政府的努力，而是靠杭州几百万市民——每一次项目征求意见、每一个项目的建设，都得到了杭州市民的关注与支持，提出了很多好的意见和建议。这使我们深深感受到，杭州市民就是运河的综合治理保护的坚强后盾，是运河综合保护的主力军。从调查研究到深刻思考，从拟定计划到切实执行，每一阶段的保护措施都凝聚着智慧与汗水。<br>　　中国刀剪剑博物馆与中国扇博物馆、中国伞博物馆一同，组成运河工业博物馆群。该博物馆群旨在发掘和保护传统的手工艺，同时兼顾展示和收藏。例如由老厂房改造后建成的博物馆群其建筑本身就是珍贵的工业遗产，将老厂房变为博物馆，既减少了建造成本又融合进传统手工艺的展览。与传统博物馆以展示不同，这几个博物馆将古老的手工艺以活态的方式展现，能让参观者参与其中，拉近了与展品的距离，生动形象，吸引了各个年龄段的观众，与传统印象中博物馆鲜有人至的感觉截然不同。<br>　　走在桥西历史街区，晓风书屋、陶一天等总理到访过的地方游人纷至沓来，拱宸桥上的商贩、书屋里的青年人、陶艺店的儿童、茶座里的老人…… 似乎，每个人都能在其中找到适合自己的地方，能够喜欢上这个地方，这或许就是科学开发传统历史文化最大的期望吧。</p></div><div class="popular-posts-header">相关推荐</div><ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/16/" rel="bookmark">如何看待奔跑吧兄弟节目组去杭州博物馆拍摄</a></div></li></ul><div class="reward-container"><div>🍭 支持一根棒棒糖！</div><button onclick='var qr=document.getElementById("qr");qr.style.display="none"===qr.style.display?"block":"none"'><i class="fas fa-qrcode" style="font-size:1.7em;line-height:1.2em"></i></button><div id="qr" style="display:none"><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/wechat-pay.jpg" alt="班班 微信支付"><p>微信支付</p></div><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/alipay.jpg" alt="班班 支付宝"><p>支付宝</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者： </strong>班班</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://mirror.zdl.one/posts/8/" title="看时代变迁 品运河精神">https://mirror.zdl.one/posts/8/</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/overview/tags/%E6%9D%AD%E5%B7%9E/" rel="tag"><i class="fa fa-tag"></i> 杭州</a> <a href="/overview/tags/%E5%8D%9A%E7%89%A9%E9%A6%86/" rel="tag"><i class="fa fa-tag"></i> 博物馆</a></div><div class="post-nav"><div class="post-nav-item"><a href="/posts/7/" rel="prev" title="中国大陆地区反垄断行政执法行为之思考"><i class="fa fa-chevron-left"></i> 中国大陆地区反垄断行政执法行为之思考</a></div><div class="post-nav-item"><a href="/posts/9/" rel="next" title="一种缘分：本科毕业论文后记">一种缘分：本科毕业论文后记 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div class="comments" id="valine-comments"></div><script>window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#人类智慧的创造"><span class="nav-text">人类智慧的创造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求真务实：保护、开发与传承"><span class="nav-text">求真务实：保护、开发与传承</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" alt="班班" src="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><p class="site-author-name" itemprop="name">班班</p><div class="site-description" itemprop="description">@lei2rock<br>日常生活、碎碎念与科研随笔记录</div></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://weibo.com/7216640993" title="微博 → https:&#x2F;&#x2F;weibo.com&#x2F;7216640993" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://twitter.com/lei2rock" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://github.com/lei2rock" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://blog.dlzhang.com/feed" title="RSS → https:&#x2F;&#x2F;blog.dlzhang.com&#x2F;feed" rel="noopener" target="_blank"><i class="fas fa-rss fa-fw"></i></a></span></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2020</span> <span class="with-love"><i class="fas fa-heart"></i> </span><span class="author" itemprop="copyrightHolder">班班</span></div></div></footer></div><script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script><script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script><script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script><script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/pisces.js"></script><script src="/js/next-boot.js"></script><script>var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});</script><script src="/js/local-search.js"></script><div id="pjax"><script>NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
+      appKey     : '5jRfX3rExENmJqhdzkRqPndP',
+      placeholder: "来这里留下你的想法与观点～（回复提醒通过邮件发送）",
+      avatar     : 'wavatar',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});</script><script type="text/javascript">if(window.location.hash)var checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100)</script><div class="moon-menu"><div class="moon-menu-items"><div class="moon-menu-item" onclick="back2bottom()"><i class="fas fa-chevron-down"></i></div><div class="moon-menu-item" onclick="back2top()"><i class="fas fa-chevron-up"></i></div></div><div class="moon-menu-button"><svg class="moon-menu-bg"><circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle><circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle></svg><div class="moon-menu-content"><div class="moon-menu-icon"><i class="fas fa-ellipsis-v"></i></div><div class="moon-menu-text"></div></div></div></div><script src="/js/injector.js"></script></div></body></html>

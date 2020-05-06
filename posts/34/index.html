@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#6c599f"><meta name="generator" content="Hexo 4.2.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#6c599f"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"mirror.zdl.one",root:"/",scheme:"Gemini",version:"7.8.0",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12,onmobile:!1},copycode:{enable:!0,show_result:!0,style:"mac"},back2top:{enable:!1,sidebar:!1,scrollpercent:!0},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!0,mediumzoom:!1,lazyload:!0,pangu:!0,comments:{style:"tabs",active:null,storage:!0,lazyload:!0,nav:null},algolia:{hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},path:"search.xml"}</script><meta name="description" content="屏幕中文章的显示效果其实和书面纸质化的效果有比较大的差异，因此原本的书写与排版规则可能在实际的博客写作中不太适用了。所以这里参考其他人所提倡的网页文字的中西文排版格式，自己设定了一些基本的规范，主要参考了 知乎的问题修改规范有哪些。"><meta property="og:type" content="article"><meta property="og:title" content="在线发布文章的排版规范"><meta property="og:url" content="https://mirror.zdl.one/posts/34/index.html"><meta property="og:site_name" content="班班碎碎念"><meta property="og:description" content="屏幕中文章的显示效果其实和书面纸质化的效果有比较大的差异，因此原本的书写与排版规则可能在实际的博客写作中不太适用了。所以这里参考其他人所提倡的网页文字的中西文排版格式，自己设定了一些基本的规范，主要参考了 知乎的问题修改规范有哪些。"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2018-06-19T04:59:31.000Z"><meta property="article:modified_time" content="2020-05-06T14:32:57.764Z"><meta property="article:author" content="班班"><meta property="article:tag" content="清单"><meta property="article:tag" content="排版"><meta name="twitter:card" content="summary"><link rel="canonical" href="https://mirror.zdl.one/posts/34/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,lang:"zh-CN"}</script><script type="text/javascript">// Live2d
+// 注意：live2d_path 参数应使用绝对路径
+//const live2d_path = "https://web-1256060851.cos.ap-shanghai.myqcloud.com/assets-hexo/live2d/";
+const live2d_path = "/live2d/";
+
+// 封装异步加载资源的方法
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+// 加载 waifu.css live2d.min.js waifu-tips.js
+if (screen.width >= 768) {
+	Promise.all([
+		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		initWidget({
+			waifuPath: live2d_path + "waifu-tips.json",
+			apiPath: "https://api.zdl.one/live2d/", // https://live2d.fghrsh.net/api/
+			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
+		});
+	});
+}
+// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
+// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
+// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
+
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+// End Live2d Code
+
+window.addEventListener('load', () => {
+	console.log('\n%c班班碎碎念', 'text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);\
+font-size: 4em;');
+	console.log('\n%cBanban Ramble%cv3.0.0%c\n', 'padding: 8px; background: #3f5973; font-weight: bold; font-size: large; color: white;', 'padding: 8px; background: #649ab6; font-size: large; color: #eee;','');
+	console.log(`页面加载完毕消耗了${Math.round(performance.now() * 100) / 100}ms`);
+});</script><title>在线发布文章的排版规范 | 班班碎碎念</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript><link rel="alternate" href="/atom.xml" title="班班碎碎念" type="application/atom+xml">
+</head><body itemscope itemtype="http://schema.org/WebPage"><div class="container"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span><h1 class="site-title">班班碎碎念</h1><span class="logo-line-after"><i></i></span></a><p class="site-subtitle" itemprop="description">无曰已是 无曰遂真</p></div><div class="site-nav-right"><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class="site-nav"><ul id="menu" class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>本站首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-overview"><a href="/overview/" rel="section"><i class="fas fa-th fa-fw"></i>文章总览</a></li><li class="menu-item menu-item-photos"><a href="/photos/" rel="section"><i class="fas fa-camera-retro fa-fw"></i>光影留痕</a></li><li class="menu-item menu-item-share"><a href="/share/" rel="section"><i class="fas fa-share-alt fa-fw"></i>好物分享</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fas fa-location-arrow fa-fw"></i>关于更多</a></li><li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fas fa-heart fa-fw"></i>小伙伴们</a></li><li class="menu-item menu-item-homepage"><a href="https://dlzhang.com/" rel="noopener" target="_blank"><i class="fas fa-globe fa-fw"></i>English</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索</a></li></ul></nav><div class="search-pop-overlay"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"><div id="no-result"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div></div></div></div></header><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content post posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://mirror.zdl.one/posts/34/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><meta itemprop="name" content="班班"><meta itemprop="description" content="@lei2rock<br>日常生活、碎碎念与科研随笔记录"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="班班碎碎念"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">在线发布文章的排版规范</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2018-06-19 12:59:31" itemprop="dateCreated datePublished" datetime="2018-06-19T12:59:31+08:00">2018-06-19</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-folder"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/overview/technology/" itemprop="url" rel="index"><span itemprop="name">科技树</span></a> </span></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-comment"></i> </span><span class="post-meta-item-text">Valine：</span> <a title="valine" href="/posts/34/#valine-comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/34/" itemprop="commentCount"></span></a></span></div></header><div class="post-body" itemprop="articleBody"><p>屏幕中文章的显示效果其实和书面纸质化的效果有比较大的差异，因此原本的书写与排版规则可能在实际的博客写作中不太适用了。所以这里参考其他人所提倡的网页文字的中西文排版格式，自己设定了一些基本的规范，主要参考了 <a href="https://www.zhihu.com/question/20414919/answer/95068251" target="_blank" rel="noopener">知乎的问题修改规范有哪些</a>。<a id="more"></a></p><h2 id="1-标点符号"><a href="#1-标点符号" class="headerlink" title="1. 标点符号"></a>1. 标点符号</h2><h3 id="1-1-全角与半角"><a href="#1-1-全角与半角" class="headerlink" title="1.1 全角与半角"></a>1.1 全角与半角</h3><ul><li>如果西文占主要内容，则除引用原文外，采用半角标点符号；</li><li>如果中文占主要内容，则除引用原文外，采用全角标点符号；</li><li>但是如果用于特别的段落，以便开头空两格，则可以在西文中使用全角空格。</li></ul><h3 id="1-2-引号"><a href="#1-2-引号" class="headerlink" title="1.2 引号"></a>1.2 引号</h3><ul><li>中英混排时使用直角引号，先单引号 <code>「 」</code> 再双引号 <code>『 』</code>，但正式行文除外（见 3.1）；</li><li>单独英文时使用 <code>&quot; &quot;</code> 或 <code>&#39; &#39;</code>，先用双引号，再单引号；</li><li>间接引用中，引号内句末的句号、问号、感叹号等标点符号应去掉。</li></ul><h3 id="1-3-分号"><a href="#1-3-分号" class="headerlink" title="1.3 分号"></a>1.3 分号</h3><ul><li>在使用项目符或者顺序列表的并列句中，前几项结尾以分号结束，最后一项以句号结束，各项之间采用逗号或者顿号分句或者分词，例如上述几个规范的罗列。</li></ul><h3 id="1-4-括号与书名号"><a href="#1-4-括号与书名号" class="headerlink" title="1.4 括号与书名号"></a>1.4 括号与书名号</h3><ul><li>中文书名、篇名、报纸名、杂志名、歌曲名、影剧名和图表名，用书名号 <code>《 》</code> 或 <code>&lt; &gt;</code>，先用前者，再用后者；</li><li>西文书名、篇名、报纸名、杂志名、歌曲名、影剧名和图表名，用斜体标识；</li><li>括号用作注明翻译或原文时应置于书名号外。</li></ul><h2 id="2-空格"><a href="#2-空格" class="headerlink" title="2. 空格"></a>2. 空格</h2><h3 id="2-1-段落中相间"><a href="#2-1-段落中相间" class="headerlink" title="2.1 段落中相间"></a>2.1 段落中相间</h3><ul><li>中西文（和其他西文半角符号、行内公式）间留一个半角空格；</li><li>中文和阿拉伯数字之间同样需留一个半角空格；</li><li>超链接文字的前后需留一个半角空格，但与标点符号之间不用留空格，避免断行时行首出现标点符号；</li><li>行内代码的前后不用留空格；</li><li>中文文字与全角标点符号之间不需要空格。</li></ul><h3 id="2-2-分级标题"><a href="#2-2-分级标题" class="headerlink" title="2.2 分级标题"></a>2.2 分级标题</h3><ul><li>采用阿拉伯数字作为分级标题；</li><li>一级标题为：<code>1.</code>、<code>2.</code>、<code>3.</code>，数字加半角句号，并与标题文字间留一个半角空格；</li><li>二级标题为：<code>1.1</code>、<code>1.2</code>、<code>1.3</code>，一级标题序号与二级标题序号间用半角句号相隔，结尾无半角句号，并与标题文字间留一个半角空格；</li><li>三级标题为：<code>1.1.1</code>、<code>2.1.3</code>，尽量不采用三级标题，而用段首加粗文字等形式实现。</li></ul><h2 id="3-段落"><a href="#3-段落" class="headerlink" title="3. 段落"></a>3. 段落</h2><h3 id="3-1-分段"><a href="#3-1-分段" class="headerlink" title="3.1 分段"></a>3.1 分段</h3><ul><li>原则上开头不空两格全角空格，直接顶格，并在段落间空一行；</li><li>正式行文时，采用开头空两格全角空格，段落间不空行的排版；</li><li>在 Markdown 写作中，独立成行的公式前后不空行。</li></ul><h3 id="3-2-断行"><a href="#3-2-断行" class="headerlink" title="3.2 断行"></a>3.2 断行</h3><ul><li>行首避免出现如逗号、句号、分号、感叹号、问号、省略号、顿号、后引号、后括号、后书名号等表示词语或句子结尾的标点符号，前括号、前书名号、前引号等可以出现在行首；</li><li>断行时应该注意尽量不要让末行只有几个字成行。</li></ul></div><div class="popular-posts-header">相关推荐</div><ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/24/" rel="bookmark">一万港币买了16个软件</a></div></li></ul><div class="reward-container"><div>🍭 支持一根棒棒糖！</div><button onclick='var qr=document.getElementById("qr");qr.style.display="none"===qr.style.display?"block":"none"'><i class="fas fa-qrcode" style="font-size:1.7em;line-height:1.2em"></i></button><div id="qr" style="display:none"><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/wechat-pay.jpg" alt="班班 微信支付"><p>微信支付</p></div><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/alipay.jpg" alt="班班 支付宝"><p>支付宝</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者： </strong>班班</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://mirror.zdl.one/posts/34/" title="在线发布文章的排版规范">https://mirror.zdl.one/posts/34/</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/overview/tags/%E6%B8%85%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 清单</a> <a href="/overview/tags/%E6%8E%92%E7%89%88/" rel="tag"><i class="fa fa-tag"></i> 排版</a></div><div class="post-nav"><div class="post-nav-item"><a href="/posts/33/" rel="prev" title="MacBook Pro 显示「不在充电」的解决方法"><i class="fa fa-chevron-left"></i> MacBook Pro 显示「不在充电」的解决方法</a></div><div class="post-nav-item"><a href="/posts/35/" rel="next" title="唐马儒因无法偿还暴走漫画「卖身契」违约金而被起诉">唐马儒因无法偿还暴走漫画「卖身契」违约金而被起诉 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div class="comments" id="valine-comments"></div><script>window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-标点符号"><span class="nav-text">1. 标点符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-全角与半角"><span class="nav-text">1.1 全角与半角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-引号"><span class="nav-text">1.2 引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-分号"><span class="nav-text">1.3 分号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-括号与书名号"><span class="nav-text">1.4 括号与书名号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-空格"><span class="nav-text">2. 空格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-段落中相间"><span class="nav-text">2.1 段落中相间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-分级标题"><span class="nav-text">2.2 分级标题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-段落"><span class="nav-text">3. 段落</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-分段"><span class="nav-text">3.1 分段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-断行"><span class="nav-text">3.2 断行</span></a></li></ol></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" alt="班班" src="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><p class="site-author-name" itemprop="name">班班</p><div class="site-description" itemprop="description">@lei2rock<br>日常生活、碎碎念与科研随笔记录</div></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://weibo.com/7216640993" title="微博 → https:&#x2F;&#x2F;weibo.com&#x2F;7216640993" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://twitter.com/lei2rock" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://github.com/lei2rock" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://blog.dlzhang.com/feed" title="RSS → https:&#x2F;&#x2F;blog.dlzhang.com&#x2F;feed" rel="noopener" target="_blank"><i class="fas fa-rss fa-fw"></i></a></span></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2020</span> <span class="with-love"><i class="fas fa-heart"></i> </span><span class="author" itemprop="copyrightHolder">班班</span></div></div></footer></div><script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script><script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script><script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script><script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/pisces.js"></script><script src="/js/next-boot.js"></script><script>var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});</script><script src="/js/local-search.js"></script><div id="pjax"><script>NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
+      appKey     : '5jRfX3rExENmJqhdzkRqPndP',
+      placeholder: "来这里留下你的想法与观点～（回复提醒通过邮件发送）",
+      avatar     : 'wavatar',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});</script><script type="text/javascript">if(window.location.hash)var checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100)</script><div class="moon-menu"><div class="moon-menu-items"><div class="moon-menu-item" onclick="back2bottom()"><i class="fas fa-chevron-down"></i></div><div class="moon-menu-item" onclick="back2top()"><i class="fas fa-chevron-up"></i></div></div><div class="moon-menu-button"><svg class="moon-menu-bg"><circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle><circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle></svg><div class="moon-menu-content"><div class="moon-menu-icon"><i class="fas fa-ellipsis-v"></i></div><div class="moon-menu-text"></div></div></div></div><script src="/js/injector.js"></script></div></body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#6c599f"><meta name="generator" content="Hexo 4.2.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#6c599f"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"mirror.zdl.one",root:"/",scheme:"Gemini",version:"7.8.0",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12,onmobile:!1},copycode:{enable:!0,show_result:!0,style:"mac"},back2top:{enable:!1,sidebar:!1,scrollpercent:!0},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!0,mediumzoom:!1,lazyload:!0,pangu:!0,comments:{style:"tabs",active:null,storage:!0,lazyload:!0,nav:null},algolia:{hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},path:"search.xml"}</script><meta name="description" content="问的是「国内」研究生博士生收入状况，那我这种在祖国不可分割的一部分某高校（香港中文大学）的博士生就来向大家汇报一下好了。经常性的固定收入与奖学金方面第一种，授课式硕士研究生（MSc &#x2F; MA 类，一年制）与授课式法律博士（JD，好像是两年制），这类项目定位上很像内地高校的「专业硕士」（专硕）：需要自己交学费（从十几万港币到三四十万港币一年不等）。没有每月定期发放的奖学金，个别项目可能会由系里面给一"><meta property="og:type" content="article"><meta property="og:title" content="国内的研究生博士生的收入状况是怎样的"><meta property="og:url" content="https://mirror.zdl.one/posts/26/index.html"><meta property="og:site_name" content="班班碎碎念"><meta property="og:description" content="问的是「国内」研究生博士生收入状况，那我这种在祖国不可分割的一部分某高校（香港中文大学）的博士生就来向大家汇报一下好了。经常性的固定收入与奖学金方面第一种，授课式硕士研究生（MSc &#x2F; MA 类，一年制）与授课式法律博士（JD，好像是两年制），这类项目定位上很像内地高校的「专业硕士」（专硕）：需要自己交学费（从十几万港币到三四十万港币一年不等）。没有每月定期发放的奖学金，个别项目可能会由系里面给一"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2017-11-06T14:52:14.000Z"><meta property="article:modified_time" content="2020-05-06T14:32:57.764Z"><meta property="article:author" content="班班"><meta property="article:tag" content="知乎"><meta property="article:tag" content="PhD"><meta name="twitter:card" content="summary"><link rel="canonical" href="https://mirror.zdl.one/posts/26/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,lang:"zh-CN"}</script><script type="text/javascript">// Live2d
+// 注意：live2d_path 参数应使用绝对路径
+//const live2d_path = "https://web-1256060851.cos.ap-shanghai.myqcloud.com/assets-hexo/live2d/";
+const live2d_path = "/live2d/";
+
+// 封装异步加载资源的方法
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+// 加载 waifu.css live2d.min.js waifu-tips.js
+if (screen.width >= 768) {
+	Promise.all([
+		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		initWidget({
+			waifuPath: live2d_path + "waifu-tips.json",
+			apiPath: "https://api.zdl.one/live2d/", // https://live2d.fghrsh.net/api/
+			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
+		});
+	});
+}
+// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
+// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
+// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
+
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+// End Live2d Code
+
+window.addEventListener('load', () => {
+	console.log('\n%c班班碎碎念', 'text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);\
+font-size: 4em;');
+	console.log('\n%cBanban Ramble%cv3.0.0%c\n', 'padding: 8px; background: #3f5973; font-weight: bold; font-size: large; color: white;', 'padding: 8px; background: #649ab6; font-size: large; color: #eee;','');
+	console.log(`页面加载完毕消耗了${Math.round(performance.now() * 100) / 100}ms`);
+});</script><title>国内的研究生博士生的收入状况是怎样的 | 班班碎碎念</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript><link rel="alternate" href="/atom.xml" title="班班碎碎念" type="application/atom+xml">
+</head><body itemscope itemtype="http://schema.org/WebPage"><div class="container"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span><h1 class="site-title">班班碎碎念</h1><span class="logo-line-after"><i></i></span></a><p class="site-subtitle" itemprop="description">无曰已是 无曰遂真</p></div><div class="site-nav-right"><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class="site-nav"><ul id="menu" class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>本站首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-overview"><a href="/overview/" rel="section"><i class="fas fa-th fa-fw"></i>文章总览</a></li><li class="menu-item menu-item-photos"><a href="/photos/" rel="section"><i class="fas fa-camera-retro fa-fw"></i>光影留痕</a></li><li class="menu-item menu-item-share"><a href="/share/" rel="section"><i class="fas fa-share-alt fa-fw"></i>好物分享</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fas fa-location-arrow fa-fw"></i>关于更多</a></li><li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fas fa-heart fa-fw"></i>小伙伴们</a></li><li class="menu-item menu-item-homepage"><a href="https://dlzhang.com/" rel="noopener" target="_blank"><i class="fas fa-globe fa-fw"></i>English</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索</a></li></ul></nav><div class="search-pop-overlay"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"><div id="no-result"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div></div></div></div></header><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content post posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://mirror.zdl.one/posts/26/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><meta itemprop="name" content="班班"><meta itemprop="description" content="@lei2rock<br>日常生活、碎碎念与科研随笔记录"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="班班碎碎念"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">国内的研究生博士生的收入状况是怎样的</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2017-11-06 22:52:14" itemprop="dateCreated datePublished" datetime="2017-11-06T22:52:14+08:00">2017-11-06</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-folder"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/overview/academic/" itemprop="url" rel="index"><span itemprop="name">学术向</span></a> </span></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-comment"></i> </span><span class="post-meta-item-text">Valine：</span> <a title="valine" href="/posts/26/#valine-comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/26/" itemprop="commentCount"></span></a></span></div></header><div class="post-body" itemprop="articleBody"><p>问的是「国内」研究生博士生收入状况，那我这种在祖国不可分割的一部分某高校（香港中文大学）的博士生就来向大家汇报一下好了。</p><p><strong>经常性的固定收入与奖学金方面</strong></p><p>第一种，授课式硕士研究生（MSc / MA 类，一年制）与授课式法律博士（JD，好像是两年制），这类项目定位上很像内地高校的「专业硕士」（专硕）：需要自己交学费（从十几万港币到三四十万港币一年不等）。没有每月定期发放的奖学金，个别项目可能会由系里面给一些学业成绩优秀的学生办法一次奖学金，金额在几千到一两万不等。<a id="more"></a>当然还有一部分是给优秀学生的入学奖学金，这个基本上不会发放现金，通常是以减免学费的形式发放。还有一些项目，比如 HKUST 的经济学 MSc ，会有一个可选的延长半年学制以供学生准备申请 PhD 做一些科研训练准备，这时候系里面会给予减免学费和提供生活费的资助。</p><p>第二种，授课式硕士研究生（MBA）：这个大家应该比较熟悉了，就是给各位大佬们准备的，学费不菲，学生的收入么自然也是很高的（当然不是学校或者政府发放的啦）。</p><p>第三种，研究式硕士研究生（MPhil，两年制）与哲学博士（PhD，三年制或四年制）：</p><ul><li>这两类的待遇基本上是一样的，按照入学时候 Offer 写明的年限按月发放 Studentship（免税发12个月），2016/17学年是15600港币/月，2017/18学年是16620港币/月，获得 HKPFS（港府奖学金）的博士生可以获得20000港币/月。</li><li>学费需要自己交，和本地本科生的学费一致，42100港币一学年，相当于3500港币/月。与上述项目不同的是，这两类项目中大学资助委员会 UGC 资助下的学校会提供宿舍（宿费按照房间规格不同，每月收取一千多至三千多不等），宿舍安排有抽签制（只有抽中的才可以在正常学制内住宿舍，如 CUHK）、限定住宿年限制（非本地新生可以保证宿位，但是只提供前两年的宿位，比如 HKUST）、面试审核结合限定住宿年限制（根据申请者的申请材料以及其对于该宿舍活动的贡献能力进行表刷和面试审核，获得宿舍的可以提供两三年的宿舍，但好像还要逐年复核，比如港岛某著名「坑U」）等几种形式。如果一些导师因为名额问题，用自己的经费给学生发奖学金而非 UGC 资助的，那么就不会由学校提供宿舍。</li></ul><p><strong>兼职收入方面</strong></p><p>由于港府入境处的政策是非本地学生不得在课程修读期间于香港全职、兼职工作，除非是在暑假由学校批准可以在香港实习，或者是平时于校内以 student helper 的形式兼职。在这种情况下，要想有额外收入，渠道有：</p><ul><li>在香港实习或者兼职，并以现金的方式取得兼职收入以规避政府监管。这类收入属于灰色收入（实际违法的），工作没有法律保障，也存在被查到然后被取消入境许可的风险。</li><li>去内地企业单位实习（以前述的第一类学生为主），获得人民币收入。</li><li>在校内以 student helper 的形式兼职（本校的标准是55港币/小时，每周上限17.5小时），主要是给老师当 part-time research assistant ，这也是符合香港法律规定的收入，并且2017/18学年开始我们学校还会根据这一收入为我们相应缴纳强积金。我在 HKUST 读 MSc 期间就曾以这种形式给一位老师做了几个月的 RA ，现在给我的导师自己的项目处理数据什么的也是以这种形式获得导师发放的报酬。</li></ul><p><a href="https://www.zhihu.com/question/54633507/answer/256014267" target="_blank" rel="noopener">阅读知乎原文</a></p></div><div class="popular-posts-header">相关推荐</div><ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/17/" rel="bookmark">商学院里的经济学 PhD 项目和经济系的有什么区别</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/10/" rel="bookmark">学习「高级微观、高级宏观、高级计量」是一种什么样的体验</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/14/" rel="bookmark">浙大人有哪些经典语录</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/16/" rel="bookmark">如何看待奔跑吧兄弟节目组去杭州博物馆拍摄</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/posts/23/" rel="bookmark">在浙大你学到的最重要的东西是什么</a></div></li></ul><div class="reward-container"><div>🍭 支持一根棒棒糖！</div><button onclick='var qr=document.getElementById("qr");qr.style.display="none"===qr.style.display?"block":"none"'><i class="fas fa-qrcode" style="font-size:1.7em;line-height:1.2em"></i></button><div id="qr" style="display:none"><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/wechat-pay.jpg" alt="班班 微信支付"><p>微信支付</p></div><div style="display:inline-block"><img src="https://web-1256060851.cos.ap-shanghai.myqcloud.com/qrcode/alipay.jpg" alt="班班 支付宝"><p>支付宝</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者： </strong>班班</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://mirror.zdl.one/posts/26/" title="国内的研究生博士生的收入状况是怎样的">https://mirror.zdl.one/posts/26/</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/overview/tags/%E7%9F%A5%E4%B9%8E/" rel="tag"><i class="fa fa-tag"></i> 知乎</a> <a href="/overview/tags/PhD/" rel="tag"><i class="fa fa-tag"></i> PhD</a></div><div class="post-nav"><div class="post-nav-item"><a href="/posts/25/" rel="prev" title="如何评价《极限挑战》第三季第十期"><i class="fa fa-chevron-left"></i> 如何评价《极限挑战》第三季第十期</a></div><div class="post-nav-item"><a href="/posts/27/" rel="next" title="期末阅卷有感">期末阅卷有感 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div class="comments" id="valine-comments"></div><script>window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" alt="班班" src="https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?s=200"><p class="site-author-name" itemprop="name">班班</p><div class="site-description" itemprop="description">@lei2rock<br>日常生活、碎碎念与科研随笔记录</div></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://weibo.com/7216640993" title="微博 → https:&#x2F;&#x2F;weibo.com&#x2F;7216640993" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://twitter.com/lei2rock" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://github.com/lei2rock" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lei2rock" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a> </span><span class="links-of-author-item"><a href="https://blog.dlzhang.com/feed" title="RSS → https:&#x2F;&#x2F;blog.dlzhang.com&#x2F;feed" rel="noopener" target="_blank"><i class="fas fa-rss fa-fw"></i></a></span></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2020</span> <span class="with-love"><i class="fas fa-heart"></i> </span><span class="author" itemprop="copyrightHolder">班班</span></div></div></footer></div><script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script><script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script><script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script><script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/pisces.js"></script><script src="/js/next-boot.js"></script><script>var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});</script><script src="/js/local-search.js"></script><div id="pjax"><script>NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
+      appKey     : '5jRfX3rExENmJqhdzkRqPndP',
+      placeholder: "来这里留下你的想法与观点～（回复提醒通过邮件发送）",
+      avatar     : 'wavatar',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});</script><script type="text/javascript">if(window.location.hash)var checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100)</script><div class="moon-menu"><div class="moon-menu-items"><div class="moon-menu-item" onclick="back2bottom()"><i class="fas fa-chevron-down"></i></div><div class="moon-menu-item" onclick="back2top()"><i class="fas fa-chevron-up"></i></div></div><div class="moon-menu-button"><svg class="moon-menu-bg"><circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle><circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle></svg><div class="moon-menu-content"><div class="moon-menu-icon"><i class="fas fa-ellipsis-v"></i></div><div class="moon-menu-text"></div></div></div></div><script src="/js/injector.js"></script></div></body></html>
